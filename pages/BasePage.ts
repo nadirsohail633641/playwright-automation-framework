@@ -4,7 +4,10 @@ export class BasePage {
   constructor(protected readonly page: Page) {}
 
   async goto(path: string): Promise<void> {
-    await this.page.goto(path);
+    await this.page.goto(path, {
+    waitUntil: 'domcontentloaded',
+    timeout: 60000,
+  });
   }
 
   async expectVisible(locator: Locator): Promise<void> {
