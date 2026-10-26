@@ -32,13 +32,18 @@ export class CheckoutPage extends BasePage {
   }
 
   async fillCustomerDetails(
-    firstName: string,
-    lastName: string,
-    postalCode: string
+  firstName: string,
+  lastName: string,
+  postalCode: string
   ): Promise<void> {
-    await this.firstNameInput.fill(firstName);
-    await this.lastNameInput.fill(lastName);
-    await this.postalCodeInput.fill(postalCode);
+  await this.firstNameInput.fill(firstName);
+  await expect(this.firstNameInput).toHaveValue(firstName);
+
+  await this.lastNameInput.fill(lastName);
+  await expect(this.lastNameInput).toHaveValue(lastName);
+
+  await this.postalCodeInput.fill(postalCode);
+  await expect(this.postalCodeInput).toHaveValue(postalCode);
   }
 
   async continueToOverview(): Promise<void> {
