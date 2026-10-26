@@ -1,7 +1,7 @@
 import { test } from '../../fixtures/test-fixtures';
 
 test.describe('Product Sorting', () => {
-  test('Products can be sorted by price: low to high', async ({
+  test('Products can be sorted by price: low to high @regression', async ({
     authenticatedPage,
     inventoryPage,
   }) => {
@@ -9,7 +9,7 @@ test.describe('Product Sorting', () => {
     await inventoryPage.expectPricesSorted('ascending');
   });
 
-  test('Products can be sorted by price: high to low', async ({
+  test('Products can be sorted by price: high to low @regression', async ({
     authenticatedPage,
     inventoryPage,
   }) => {

@@ -1,6 +1,6 @@
 import { test } from '../../fixtures/test-fixtures';
 
-test('User can remove a product from cart', async ({
+test('User can remove a product from cart @regression', async ({
   authenticatedPage,
   inventoryPage,
   cartPage,

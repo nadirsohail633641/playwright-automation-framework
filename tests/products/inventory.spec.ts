@@ -1,7 +1,6 @@
-
 import { test, expect } from '../../fixtures/test-fixtures';
 
-test('User can add a product to cart', async ({
+test('User can add a product to cart @smoke', async ({
   authenticatedPage,
   inventoryPage,
 }) => {

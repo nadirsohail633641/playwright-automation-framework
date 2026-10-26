@@ -1,9 +1,8 @@
-
 import { test, expect } from '../../fixtures/test-fixtures';
 import { users } from '../../test-data/users';
 
 test.describe('SauceDemo Login', () => {
-  test('User can login successfully', async ({ loginPage, page }) => {
+  test('User can login successfully @smoke', async ({ loginPage, page }) => {
     await loginPage.open();
 
     await loginPage.login(
@@ -17,7 +16,7 @@ test.describe('SauceDemo Login', () => {
     ).toBeVisible();
   });
 
-  test('Invalid login shows an error', async ({ loginPage }) => {
+  test('Invalid login shows an error @regression', async ({ loginPage }) => {
     await loginPage.open();
 
     await loginPage.login(

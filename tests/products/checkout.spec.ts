@@ -2,7 +2,7 @@
 import { test, expect } from '../../fixtures/test-fixtures';
 import { checkoutDetails } from '../../test-data/users';
 
-test('User can complete checkout successfully', async ({
+test('User can complete checkout successfully @smoke @regression', async ({
   authenticatedPage,
   inventoryPage,
   cartPage,
